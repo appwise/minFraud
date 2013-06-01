@@ -19,7 +19,7 @@
             <cflock type="exclusive" scope="session" timeout="3">
                 <cfset arr = ArrayNew(1)>
                 <cfset temp = ArrayNew(1)> 
-                <cfset myStruct=StructNew()>
+                <cfset minFraudStruct=StructNew()>
                 <cfset clearTemp = ArrayClear(temp)>
             </cflock>    
             
@@ -49,7 +49,7 @@
                 <cfif ArrayLen(temp) EQ 2>
                     <cfset minFraudStruct[Temp[1]] = Temp[2]>
                 <cfelse>
-                    <cfset minFraud[Temp[1]] = 'NA'>
+                    <cfset minFraudStruct[Temp[1]] = 'NA'>
                 </cfif>
             	<cfset clearTemp = ArrayClear(temp)>
             </cfloop>
