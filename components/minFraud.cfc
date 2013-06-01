@@ -55,6 +55,6 @@
             </cfloop>
             
            
-		<cfreturn minFraud>
+		<cfreturn minFraudStruct>
 	</cffunction>
 </cfcomponent>
